@@ -49,17 +49,21 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
 
-    ".config/nvim" = {
-        source = "${self}/nvim";
-	recursive = true;
+    # ".config/nvim" = {
+    #     source = "${self}/nvim";
+    #  recursive = true;
+    # };
+    ".config/zed" = {
+        source = "${self}/zed";
+	    recursive = true;
     };
     ".config/mpv" = {
         source = "${self}/mpv";
-	recursive = true;
+	    recursive = true;
     };
     ".config/tmux" = {
         source = "${self}/tmux";
-	recursive = true;
+	    recursive = true;
     };
   };
 

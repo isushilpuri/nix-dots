@@ -9,6 +9,13 @@ rm -f home-switch.log
 # Show diff of nix files
 git diff -U0 -- '*.nix'
 
+read -rp "Do you want to proceed with Home Manager rebuild? (y/N): " confirm
+if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+    echo "Aborted."
+    popd
+    exit 0
+fi
+
 # Rebuild Home Manager, log output
 echo "Home Manager Rebuilding..."
 if ! home-manager switch --flake .#v0idshil &>home-switch.log; then

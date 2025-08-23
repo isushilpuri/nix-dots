@@ -8,7 +8,11 @@
     mouse = true;
     sensibleOnTop = true;
     prefix = "C-Space";
+    terminal = "screen-256color";
     extraConfig = ''
+      set -g utf8 on
+      set -g status-utf8 on
+
       # Shift Alt vim keys to switch windows
       bind -n M-H previous-window
       bind -n M-L next-window

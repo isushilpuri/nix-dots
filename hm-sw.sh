@@ -23,13 +23,17 @@ fi
 #     exit 1
 # fi
 
-# Rebuild Home Manager, log output and show filtered progress
 echo "Home Manager Rebuilding..."
-if ! home-manager switch --flake .#v0idshil --show-trace 2>&1 \
-    | tee home-switch.log \
-    | grep --line-buffered -E --color=never 'downloading'; then
+# Run home-manager, log everything
+home-manager switch --flake .#v0idshil --show-trace 2>&1 | tee home-switch.log \
+    | grep --line-buffered -E --color=never 'downloading|building|evaluating|copying' &
 
-    echo -e "\n❌ Build failed.\n"
+pid=$!
+wait $pid
+status=${PIPESTATUS[0]}  # Exit status of home-manager
+
+if [ $status -ne 0 ]; then
+    echo -e "\n Build failed:\n"
     grep --color=always -i "error" home-switch.log || true
     popd > /dev/null
     exit 1

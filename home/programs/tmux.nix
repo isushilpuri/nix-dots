@@ -11,6 +11,9 @@
     terminal = "screen-256color";
     shell = "${pkgs.zsh}/bin/zsh";
     extraConfig = ''
+      set-environment -g LANG "en_US.UTF-8"
+      set-environment -g LC_ALL "en_US.UTF-8"
+
       set-option -sa terminal-overrides ",xterm-256color:Tc"
       # Shift Alt vim keys to switch windows
       bind -n M-H previous-window

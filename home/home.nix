@@ -5,6 +5,7 @@
     ./programs/zsh.nix
     ./programs/nvf.nix
     ./programs/starship.nix
+    ./programs/tmux.nix
   ];
 
   home.username = "v0idshil";
@@ -67,10 +68,10 @@
         source = "${self}/mpv";
 	    recursive = true;
     };
-    ".config/tmux" = {
-        source = "${self}/tmux";
-	    recursive = true;
-    };
+    # ".config/tmux" = {
+    #     source = "${self}/tmux";
+    #  recursive = true;
+    # };
   };
 
   # Home Manager can also manage your environment variables through

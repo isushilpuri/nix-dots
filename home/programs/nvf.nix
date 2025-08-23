@@ -27,16 +27,105 @@
         globals.mapleader = " ";
         keymaps = [
           {
+            key = "J";
+            mode = "v";
+            silent = true;
+            action = ":m '>+1<CR>gv=gv";
+          }
+          {
+            key = "K";
+            mode = "v";
+            silent = true;
+            action = ":m '<-2<CR>gv=gv";
+          }
+
+          {
+            key = "J";
+            mode = "n";
+            silent = true;
+            action = "mzJ`z";
+          }
+          {
+            key = "<C-d>";
+            mode = "n";
+            silent = true;
+            action = "<C-d>zz";
+          }
+          {
+            key = "<C-u>";
+            mode = "n";
+            silent = true;
+            action = "<C-u>zz";
+          }
+          {
+            key = "n";
+            mode = "n";
+            silent = true;
+            action = "nzzzv";
+          }
+          {
+            key = "N";
+            mode = "n";
+            silent = true;
+            action = "Nzzzv";
+          }
+          
+          {
+            key = "<leader>p";
+            mode = "x";
+            silent = true;
+            action = "\"_dP";
+          }
+          
+          {
+            key = "<leader>y";
+            mode = ["n" "v"]; 
+            silent = true;
+            action = "\"+y";
+          }
+          {
+            key = "<leader>Y";
+            mode = "n";
+            silent = true;
+            action = "\"+Y";
+          }
+          {
+            key = "Q";
+            mode = "n";
+            silent = true;
+            action = "<nop>";
+          }
+          
+          {
+            key = "<leader>k";
+            mode = "n";
+            silent = true;
+            action = "<cmd>lnext<CR>zz";
+          }
+          {
+            key = "<leader>j";
+            mode = "n";
+            silent = true;
+            action = "<cmd>lprev<CR>zz";
+          }
+
+          {
+            key = "kj";
+            mode = "i";
+            silent = true;
+            action = "<ESC>";
+          }
+          {
             key = "<leader>w";
             mode = "n";
             silent = true;
-            action = ":w!";
+            action = ":w!<CR>";
           }
           {
             key = "<leader>q";
             mode = "n";
             silent = true;
-            action = ":q!";
+            action = ":q!<CR>";
           }
           {
             key = "<leader>l";

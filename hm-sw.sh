@@ -4,6 +4,8 @@ set -euo pipefail
 # Go to nix-dots repo
 pushd ~/nix-dots/
 
+rm -f home-switch.log
+
 # Show diff of nix files
 git diff -U0 *.nix
 

@@ -1,6 +1,11 @@
 { config, pkgs, self, ... }:
 
 {
+  imports = [
+    ./programs/zsh.nix
+    ./programs/nvf.nix
+  ];
+
   home.username = "v0idshil";
   home.homeDirectory = "/home/v0idshil";
 
@@ -84,7 +89,7 @@
   #  /etc/profiles/per-user/v0idshil/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
@@ -111,32 +116,5 @@
           co = "checkout";
           cm = "commit";
       };
-  };
-
-  programs.nvf = {
-    enable = true;
-    settings = {
-      vim = {
-        theme = {
-          enable = true;
-          name = "gruvbox";
-          style = "dark";
-        };
-
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-
-        languages = {
-          enableLSP = true;
-          enableTreesitter = true;
-          enableFormat = true;
-
-          nix.enable = true;
-          rust.enable = true;
-          python.enable = true;
-        };
-      };
-    };
   };
 }

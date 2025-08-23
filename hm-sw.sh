@@ -16,26 +16,10 @@ if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     exit 0
 fi
 
-# # Rebuild Home Manager, log output
-# echo "Home Manager Rebuilding..."
-# if ! home-manager switch --flake .#v0idshil &>home-switch.log; then
-#     grep --color=always "error" home-switch.log || true
-#     exit 1
-# fi
-
+# Rebuild Home Manager, log output
 echo "Home Manager Rebuilding..."
-# Run home-manager, log everything
-home-manager switch --flake .#v0idshil --show-trace 2>&1 | tee home-switch.log \
-    | grep --line-buffered -E --color=never 'downloading|Mib|MIB' &
-
-pid=$!
-wait $pid
-status=${PIPESTATUS[0]}  # Exit status of home-manager
-
-if [ $status -ne 0 ]; then
-    echo -e "\n Build failed:\n"
-    grep --color=always -i "error" home-switch.log || true
-    popd > /dev/null
+if ! home-manager switch --flake .#v0idshil &>home-switch.log; then
+    grep --color=always "error" home-switch.log || true
     exit 1
 fi
 

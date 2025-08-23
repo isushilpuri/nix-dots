@@ -27,6 +27,7 @@
 
         terminal.toggleterm.lazygit = {
           enable = true;
+          mappings.open = "<leader>gg"; 
         };
 
         globals.mapleader = " ";

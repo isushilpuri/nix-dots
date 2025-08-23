@@ -26,7 +26,7 @@ fi
 echo "Home Manager Rebuilding..."
 # Run home-manager, log everything
 home-manager switch --flake .#v0idshil --show-trace 2>&1 | tee home-switch.log \
-    | grep --line-buffered -E --color=never 'downloading|building|evaluating|copying' &
+    | grep --line-buffered -E --color=never 'downloading|Mib|MIB' &
 
 pid=$!
 wait $pid

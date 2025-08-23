@@ -8,7 +8,7 @@
     mouse = true;
     sensibleOnTop = true;
     prefix = "C-Space";
-    terminal = "screen-256color";
+    terminal = "tmux-256color";
     shell = "${pkgs.zsh}/bin/zsh";
     extraConfig = ''
       set-environment -g LANG "en_US.UTF-8"

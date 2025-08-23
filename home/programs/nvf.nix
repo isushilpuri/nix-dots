@@ -24,6 +24,11 @@
           rust.enable = true;
           python.enable = true;
         };
+
+        terminal.toggleterm.lazygit = {
+          enable = true;
+        };
+
         globals.mapleader = " ";
         keymaps = [
           {
@@ -134,6 +139,16 @@
             action = "<cmd>cnext<CR>";
           }
         ];
+
+        filetree.nvimTree = {
+            enable = true;
+            setupOpts.modified.enable = true;
+            mappings = {
+              focus = "<leader>e";
+              refresh = "<leader>tf";
+              toggle = "<leader>tt";
+            };
+        };
       };
     };
   };

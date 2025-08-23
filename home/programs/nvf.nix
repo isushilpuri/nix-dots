@@ -20,9 +20,27 @@
           enableTreesitter = true;
           enableFormat = true;
 
-          nix.enable = true;
-          rust.enable = true;
-          python.enable = true;
+          nix = {
+            enable = true;
+            format = {
+              enable = true;
+              type = "nixfmt";
+            };
+          };
+          rust = {
+            enable = true;
+            format = {
+              enable = true;
+              type = "rustfmt";
+            };
+          };
+          python = {
+            enable = true;
+            format = {
+              enable = true;
+              type = "ruff";
+            };
+          };
         };
 
         globals.mapleader = " ";

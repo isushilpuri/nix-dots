@@ -7,13 +7,13 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-       url = "github:notashelf/nvf";
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nvf = {
+    #    url = "github:notashelf/nvf";
+    #    inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }: 
+  outputs = { self, nixpkgs, home-manager, ... }: 
     let
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages."${system}";
@@ -26,7 +26,7 @@
       homeConfigurations."v0idshil" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-	    nvf.homeManagerModules.default
+	    # nvf.homeManagerModules.default
             ./home.nix
 	];
 

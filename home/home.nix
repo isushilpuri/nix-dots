@@ -3,7 +3,6 @@
 {
   imports = [
     ./programs/zsh.nix
-    ./programs/nvf.nix
     ./programs/starship.nix
     ./programs/tmux.nix
   ];

@@ -4,6 +4,7 @@
   imports = [
     ./programs/zsh.nix
     ./programs/nvf.nix
+    ./programs/starship.nix
   ];
 
   home.username = "v0idshil";

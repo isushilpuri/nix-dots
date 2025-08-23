@@ -25,6 +25,8 @@
     postgresql
     nodejs_24
     ripgrep
+    gcc
+    zig
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

@@ -7,7 +7,7 @@ pushd ~/nix-dots/home/
 rm -f home-switch.log
 
 # Show diff of nix files
-git diff -U0 *.nix
+git diff -U0 -- '*.nix'
 
 # Rebuild Home Manager, log output
 echo "Home Manager Rebuilding..."

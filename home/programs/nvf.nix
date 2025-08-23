@@ -24,6 +24,27 @@
           rust.enable = true;
           python.enable = true;
         };
+        globals.mapleader = " ";
+        keymaps = [
+          {
+            key = "<leader>w";
+            mode = "n";
+            silent = true;
+            action = ":w!";
+          }
+          {
+            key = "<leader>q";
+            mode = "n";
+            silent = true;
+            action = ":q!";
+          }
+          {
+            key = "<leader>l";
+            mode = ["n" "x"];
+            silent = true;
+            action = "<cmd>cnext<CR>";
+          }
+        ];
       };
     };
   };

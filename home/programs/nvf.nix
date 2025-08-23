@@ -25,11 +25,6 @@
           python.enable = true;
         };
 
-        terminal.toggleterm.lazygit = {
-          enable = true;
-          mappings.open = "<leader>gg"; 
-        };
-
         globals.mapleader = " ";
         keymaps = [
           {
@@ -140,6 +135,11 @@
             action = "<cmd>cnext<CR>";
           }
         ];
+        
+        terminal.toggleterm.lazygit = {
+          enable = true;
+          mappings.open = "<leader>gg"; 
+        };
 
         filetree.nvimTree = {
             enable = true;

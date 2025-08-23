@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Go to nix-dots repo
-pushd ~/nix-dots/
+pushd ~/nix-dots/home/
 
 rm -f home-switch.log
 

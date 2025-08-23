@@ -117,4 +117,9 @@
           cm = "commit";
       };
   };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true; # if you're using zsh
+  };
 }

@@ -23,6 +23,8 @@
     uv
     vim
     postgresql
+    nodejs_24
+    ripgrep
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

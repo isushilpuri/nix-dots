@@ -16,10 +16,22 @@ if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     exit 0
 fi
 
-# Rebuild Home Manager, log output
+# # Rebuild Home Manager, log output
+# echo "Home Manager Rebuilding..."
+# if ! home-manager switch --flake .#v0idshil &>home-switch.log; then
+#     grep --color=always "error" home-switch.log || true
+#     exit 1
+# fi
+
+# Rebuild Home Manager, log output and show filtered progress
 echo "Home Manager Rebuilding..."
-if ! home-manager switch --flake .#v0idshil &>home-switch.log; then
-    grep --color=always "error" home-switch.log || true
+if ! home-manager switch --flake .#v0idshil --show-trace 2>&1 \
+    | tee home-switch.log \
+    | grep --line-buffered -E --color=never 'downloading'; then
+
+    echo -e "\n❌ Build failed.\n"
+    grep --color=always -i "error" home-switch.log || true
+    popd > /dev/null
     exit 1
 fi
 
@@ -36,4 +48,3 @@ fi
 
 # Return to original directory
 popd
-

@@ -9,7 +9,9 @@
     sensibleOnTop = true;
     prefix = "C-Space";
     terminal = "screen-256color";
+    shell = "${pkgs.zsh}/bin/zsh";
     extraConfig = ''
+      set-option -sa terminal-overrides ",xterm-256color:Tc"
       # Shift Alt vim keys to switch windows
       bind -n M-H previous-window
       bind -n M-L next-window

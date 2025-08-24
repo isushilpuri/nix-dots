@@ -128,7 +128,7 @@
 
   programs.neovim = {
       enable = true;
-      extraPackages = with pkgs; [ lua-language-server ];
+      extraPackages = with pkgs; [ lua-language-server rust-analyzer ];
   };
 
 }

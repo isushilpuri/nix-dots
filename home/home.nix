@@ -129,6 +129,12 @@
   programs.neovim = {
       enable = true;
       extraPackages = with pkgs; [ lua-language-server rust-analyzer ];
+      extraWrapperArgs = [
+	  "--prefix"
+	      "PATH"
+	      ":"
+	      "${pkgs.rust-analyzer}/bin"
+      ];
   };
 
 }

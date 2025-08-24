@@ -124,4 +124,10 @@
     enable = true;
     enableZshIntegration = true; # if you're using zsh
   };
+
+  programs.neovim = {
+      enable = true;
+      extraPackages = with pkgs; [ lua-language-server ];
+  };
+
 }

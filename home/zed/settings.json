@@ -21,8 +21,13 @@
   "buffer_font_size": 18,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark Hard",
-    "dark": "One Dark"
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
   },
   "restore_on_startup": "last_session",
   "relative_line_numbers": true,

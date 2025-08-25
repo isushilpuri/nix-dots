@@ -121,7 +121,7 @@
     obs-studio
     kdePackages.kdenlive
     obsidian
-    cascadia-code
+    bat
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

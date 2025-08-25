@@ -24,7 +24,7 @@ if ! sudo nixos-rebuild switch --flake .#nixos &>os-switch.log; then
 fi
 
 # Get current generation
-gen=$(nixos-rebuild list-generations | grep current)
+gen=$(nixos-rebuild list-generations | grep True)
 
 # Commit changes if there are any
 if ! git diff --quiet; then

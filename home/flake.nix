@@ -11,9 +11,10 @@
     #    url = "github:notashelf/nvf";
     #    inputs.nixpkgs.follows = "nixpkgs";
     # };
+    yazi.url = "github:sxyazi/yazi";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: 
+  outputs = { self, nixpkgs, home-manager, yazi, ... }: 
     let
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages."${system}";
@@ -28,6 +29,14 @@
         modules = [
 	    # nvf.homeManagerModules.default
             ./home.nix
+	    ({ pkgs, ... }: {
+		nixpkgs.config.allowUnfree = true;
+		home.packages = [
+		  (yazi.packages.${pkgs.system}.default.override {
+		    _7zz = pkgs._7zz-rar;  # Support for RAR extraction
+		  })
+		];
+	    })
 	];
 
         # To use 'self' inside home.nix

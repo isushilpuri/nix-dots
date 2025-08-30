@@ -157,6 +157,7 @@
     gvfs              # Virtual file system backend for Nautilus (needed for mounting)
     polkit            # PolicyKit itself
     polkit_gnome
+    nemo
     brightnessctl
     gruvbox-gtk-theme
     papirus-icon-theme

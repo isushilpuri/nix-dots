@@ -96,6 +96,15 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Install Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -122,6 +131,17 @@
     kdePackages.kdenlive
     obsidian
     bat
+
+    # Hyprland packages
+    waybar
+    (waybar.overrideAttrs (oldAttrs: {
+	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+	})
+    )
+    dunst
+    libnotify
+    swww
+    wofi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

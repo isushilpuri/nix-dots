@@ -147,6 +147,9 @@
     slurp
     wl-clipboard
     pavucontrol
+    nwg-look
+    gruvbox-gtk-theme
+    papirus-icon-theme
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

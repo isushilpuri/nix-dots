@@ -112,6 +112,8 @@
   programs.nix-ld.libraries = with pkgs; [
   ];
 
+  services.udisks2.enable = true; # for enabling mounting support
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -151,6 +153,9 @@
     hypridle
     swaylock
     swaylock-fancy
+    gvfs              # Virtual file system backend for Nautilus (needed for mounting)
+    polkit            # PolicyKit itself
+    lxqt.lxqt-policykit    # Polkit authentication agent (for password prompt)
     gruvbox-gtk-theme
     papirus-icon-theme
   ];

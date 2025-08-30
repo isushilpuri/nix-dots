@@ -113,6 +113,7 @@
   ];
 
   services.udisks2.enable = true; # for enabling mounting support
+  security.polkit.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -155,7 +156,7 @@
     swaylock-fancy
     gvfs              # Virtual file system backend for Nautilus (needed for mounting)
     polkit            # PolicyKit itself
-    lxqt.lxqt-policykit    # Polkit authentication agent (for password prompt)
+    polkit_gnome
     brightnessctl
     gruvbox-gtk-theme
     papirus-icon-theme

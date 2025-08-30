@@ -148,6 +148,9 @@
     wl-clipboard
     pavucontrol
     nwg-look
+    hypridle
+    swaylock
+    swaylock-fancy
     gruvbox-gtk-theme
     papirus-icon-theme
   ];

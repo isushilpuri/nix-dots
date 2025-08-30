@@ -156,6 +156,7 @@
     gvfs              # Virtual file system backend for Nautilus (needed for mounting)
     polkit            # PolicyKit itself
     lxqt.lxqt-policykit    # Polkit authentication agent (for password prompt)
+    brightnessctl
     gruvbox-gtk-theme
     papirus-icon-theme
   ];

@@ -21,13 +21,13 @@
   "buffer_font_size": 18,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha"
+    "light": "Gruvbox Dark",
+    "dark": "Gruvbox Dark"
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
-    "dark": "Catppuccin Mocha"
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
   },
   "restore_on_startup": "last_session",
   "relative_line_numbers": true,

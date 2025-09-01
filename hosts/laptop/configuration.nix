@@ -135,13 +135,6 @@
     bat
 
     # Hyprland packages
-    waybar
-    (waybar.overrideAttrs (oldAttrs: {
-	mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-	})
-    )
-    dunst
-    libnotify
     swww
     wofi
     networkmanagerapplet

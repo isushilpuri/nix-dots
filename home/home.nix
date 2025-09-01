@@ -6,6 +6,7 @@
     ./programs/starship.nix
     ./programs/tmux.nix
     ./programs/ghostty.nix
+    ./programs/hyprpanel.nix
   ];
 
   home.username = "v0idshil";

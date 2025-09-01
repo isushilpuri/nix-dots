@@ -37,7 +37,7 @@
       theme.bar.transparent = true;
 
       theme.font = {
-        name = "IntoneMono Nerd Font Medium";
+        name = "IntoneMono Nerd Font";
         size = "12px";
 	weight = "400";
       };

@@ -37,8 +37,9 @@
       theme.bar.transparent = true;
 
       theme.font = {
-        name = "CaskaydiaCove NF";
-        size = "16px";
+        name = "IntoneMono Nerd Font Medium";
+        size = "12px";
+	weight = "400";
       };
     };
   };

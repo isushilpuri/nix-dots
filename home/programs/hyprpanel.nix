@@ -23,6 +23,8 @@
       bar.launcher.autoDetectIcon = true;
       bar.workspaces.show_icons = true;
 
+      bar.clock.format = "%a %b %d  %I:%M %p";
+
       menus.clock = {
         time = {
           military = true;

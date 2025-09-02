@@ -31,8 +31,27 @@
         weather.unit = "metric";
       };
 
+      theme.bar.buttons.monochrome = true;
+      theme.bar.menus.monochrome = true;
+
       menus.dashboard.directories.enabled = false;
       menus.dashboard.stats.enable_gpu = true;
+
+      menus.dashboard.shortcuts.left.shortcut1.icon = "";
+      menus.dashboard.shortcuts.left.shortcut1.command = "firfox";
+      menus.dashboard.shortcuts.left.shortcut1.tooltip = "Firfox";
+
+      menus.dashboard.shortcuts.left.shortcut2.icon = "";
+      menus.dashboard.shortcuts.left.shortcut2.command = "ghostty";
+      menus.dashboard.shortcuts.left.shortcut2.tooltip = "Ghostty";
+
+      menus.dashboard.shortcuts.left.shortcut3.icon = "󰹕";
+      menus.dashboard.shortcuts.left.shortcut3.command = "obsidian";
+      menus.dashboard.shortcuts.left.shortcut3.tooltip = "Obsidian";
+
+      menus.dashboard.shortcuts.left.shortcut4.icon = "";
+      menus.dashboard.shortcuts.left.shortcut4.command = "wofi --show drun";
+      menus.dashboard.shortcuts.left.shortcut4.tooltip = "Search Apps";
 
       theme.bar.transparent = true;
 

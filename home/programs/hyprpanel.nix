@@ -33,9 +33,6 @@
         weather.unit = "metric";
       };
 
-      theme.bar.buttons.monochrome = true;
-      theme.bar.menus.monochrome = true;
-
       menus.dashboard.directories.enabled = false;
       menus.dashboard.stats.enable_gpu = true;
 

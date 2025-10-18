@@ -90,6 +90,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
     #  thunderbird
+	tree
     ];
   };
 
@@ -135,6 +136,8 @@
     bat
 
     # Hyprland packages
+    waybar
+    hyprpaper
     swww
     wofi
     networkmanagerapplet
@@ -150,11 +153,6 @@
     polkit            # PolicyKit itself
     lxqt.lxqt-policykit
     brightnessctl
-    gruvbox-gtk-theme
-    papirus-icon-theme
-    libsForQt5.qt5ct           # Qt5 configuration tool
-    gruvbox-kvantum
-    bibata-cursors
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

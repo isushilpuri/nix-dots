@@ -140,7 +140,7 @@
     hyprpaper
     swww
     wofi
-    networkmanagerapplet
+    networkmanager_dmenu
     grim
     slurp
     wl-clipboard

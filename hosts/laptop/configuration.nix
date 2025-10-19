@@ -145,6 +145,7 @@
     networkmanager_dmenu
     grim
     slurp
+    swappy
     wl-clipboard
     pavucontrol
     nwg-look

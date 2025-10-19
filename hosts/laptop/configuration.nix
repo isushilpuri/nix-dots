@@ -141,6 +141,7 @@
     swww
     wofi
     mako
+    libnotify
     networkmanager_dmenu
     grim
     slurp

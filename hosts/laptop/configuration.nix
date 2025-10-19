@@ -140,6 +140,7 @@
     hyprpaper
     swww
     wofi
+    mako
     networkmanager_dmenu
     grim
     slurp

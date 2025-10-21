@@ -31,6 +31,7 @@
     gimp
     unzip
     foliate
+    protonvpn-gui
     qutebrowser
     keepassxc
     gnumake

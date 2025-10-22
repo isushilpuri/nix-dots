@@ -31,6 +31,7 @@
     gimp
     unzip
     foliate
+    ffmpeg-full
     protonvpn-gui
     qutebrowser
     keepassxc

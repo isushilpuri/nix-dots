@@ -18,6 +18,9 @@
       # Custom configs go here
       export EDITOR=nvim
       bindkey '^R' history-incremental-search-backward
+
+      # Add ~/.local/bin to PATH
+      export PATH=$HOME/.local/bin:$PATH
     '';
   };
 }

@@ -159,7 +159,8 @@
     # lxqt.lxqt-policykit
     hyprpolkitagent
     brightnessctl
-    pulseaudio
+    pulseaudioFull
+    alsa-utils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

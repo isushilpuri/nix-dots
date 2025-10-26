@@ -117,6 +117,12 @@
 
   security.polkit.enable = true; # for enabling polkit
 
+  # configuration.nix
+  services.xserver.videoDrivers = [ "modesetting" ];
+  hardware.opengl.enable = true;
+  hardware.opengl.extraPackages = with pkgs; [ mesa ];
+
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
